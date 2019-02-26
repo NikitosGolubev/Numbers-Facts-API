@@ -54,9 +54,9 @@ class DbFactsGetterService implements Service {
      */
     public function get() {
         $db_response_builder = new DbResponseFinalArrayBuilder(new RB);
-        $resultObj = $this->mainRequest->get();
+        $result_obj = $this->mainRequest->get();
         // Format result to convinient form (Array)
-        $final_result = $db_response_builder->build($resultObj);
+        $final_result = $db_response_builder->build($result_obj);
         
         return $final_result;
     }
