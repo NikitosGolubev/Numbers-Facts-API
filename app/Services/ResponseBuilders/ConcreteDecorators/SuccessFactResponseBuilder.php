@@ -21,8 +21,15 @@ class SuccessFactResponseBuilder extends ResponseBuilderDecorator implements
      * @return String|False
      */
     public function build($data) {
+        $response = [];
+        
+        $response['fact'] = $data->fact;
+        $response['number'] = $data->number;
+        $response['category'] = $data->category;
+        $response['notFound'] = false;
+
         $to_json = new JSONResponseBuilder(new RB);
-        $response = $to_json->build($data);
+        $response = $to_json->build($response);
         return parent::build($response);
     }
 }

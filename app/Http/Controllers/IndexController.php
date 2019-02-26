@@ -3,12 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Services\Api\FetchingSingleFact\RandomFactFromRandomCatApi;
-use App\Services\Converters\FactNumberToLeadingZerosConverter;
 
 /**
  * Index controller
- * 
- * @uses FactNumberToLeadingZerosConverter - to convert fact number to appropriate format
  */
 class IndexController extends Controller
 {
@@ -33,10 +30,6 @@ class IndexController extends Controller
 
         // handles response
         $response = json_decode($response_json);
-        // adding forward zeros if needed to fact numbers
-        $converter = new FactNumberToLeadingZerosConverter;
-        $response->number = $converter->forward($response->number);
-
         return view('index.index')->with('response', $response);
     }
 }

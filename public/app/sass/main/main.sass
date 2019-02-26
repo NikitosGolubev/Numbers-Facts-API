@@ -169,3 +169,26 @@ h1, h2, h3, h4, h5, h6,
     &:focus
         color: color(primary)
         opacity: 1
+
+/* Lists */
+
+.docs-list
+    display: table
+
+    &__item
+        background-color: color(secondary)
+        margin: 2vh 0
+        padding: 1.5vmin 3vmin
+    
+    &__header
+        font-weight: bold
+        font-size: $big_font_size
+        color: color(muted)
+
+/* Code sample (inside pre tag) */
+
+.code-sample
+    background-color: color(secondary)
+    display: table
+    padding: 2vh
+    font-size: $small_font_size

@@ -38,7 +38,7 @@ class NotFoundFactNumberResponseBuilder extends ResponseBuilderDecorator impleme
         $response['fact'] = $random_empty_message;
         $response['number'] = $data['number'];
         $response['category'] = "Doesn't matter";
-        $response['result'] = false;
+        $response['notFound'] = true;
 
         // Turning response into JSON format
         $to_json = new JSONResponseBuilder(new RB);

@@ -194,3 +194,22 @@ h1, h2, h3, h4, h5, h6,
   .field:focus {
     color: #ff0000;
     opacity: 1; }
+
+/* Lists */
+.docs-list {
+  display: table; }
+  .docs-list__item {
+    background-color: #eaeaea;
+    margin: 2vh 0;
+    padding: 1.5vmin 3vmin; }
+  .docs-list__header {
+    font-weight: bold;
+    font-size: 3.5vmin;
+    color: #a1a1a1; }
+
+/* Code sample (inside pre tag) */
+.code-sample {
+  background-color: #eaeaea;
+  display: table;
+  padding: 2vh;
+  font-size: 2.1vmin; }

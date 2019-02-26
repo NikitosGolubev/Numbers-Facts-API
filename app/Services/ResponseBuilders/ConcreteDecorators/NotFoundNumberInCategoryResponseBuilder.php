@@ -33,7 +33,7 @@ class NotFoundNumberInCategoryResponseBuilder extends ResponseBuilderDecorator i
         $response['fact'] = $empty_message;
         $response['number'] = $data['number'];
         $response['category'] = $data['category'];
-        $response['result'] = false;
+        $response['notFound'] = true;
 
         $to_json = new JSONResponseBuilder(new RB);
         $response = $to_json->build($response);
