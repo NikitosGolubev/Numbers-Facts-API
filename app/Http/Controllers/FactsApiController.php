@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Configs\ConcreteConfigs\FactsConfig;
+use App\Services\Verifiers\FactCategoryVerifier;
+use App\Services\Verifiers\FactNumberVerifier;
 use App\Services\Api\FetchingSingleFact\RandomFactFromRandomCatApi;
 use App\Services\Api\FetchingSingleFact\RandomFactFromConcreteCatApi;
 use App\Services\Api\FetchingSingleFact\ConcreteFactFromRandomCatApi;
@@ -11,7 +12,8 @@ use App\Services\Api\FetchingSingleFact\ConcreteFactFromConcreteCatApi;
 /**
  * Controller for handling api requests. Uses API methods.
  *
- * @uses FactsConfig
+ * @uses FactCategoryVerifier
+ * @uses FactNumberVerifier
  * @uses RandomFactFromRandomCatApi
  * @uses RandomFactFromConcreteCatApi
  * @uses ConcreteFactFromRandomCatApi
@@ -43,7 +45,7 @@ class FactsApiController extends Controller
      */
     public function getFactFromRandomCat($fact_number) {
         // checking if valid number was passed
-        if ($fact_number < FactsConfig::MIN_FACT_NUMBER || $fact_number > FactsConfig::MAX_FACT_NUMBER) {
+        if (!FactNumberVerifier::verify($fact_number)) {
             return redirect()->route('404');
         }
 
@@ -57,7 +59,7 @@ class FactsApiController extends Controller
      */
     public function getRandomFactFromConcreteCat($fact_category) {
         // checking if existing category was passed
-        if (!in_array($fact_category, FactsConfig::FACTS_CATEGORIES)) {
+        if (!FactCategoryVerifier::verify($fact_category)) {
             return redirect()->route('404');
         }
 
@@ -71,11 +73,9 @@ class FactsApiController extends Controller
      */
     public function getFactFromConcreteCat($fact_category, $fact_number) {
         // checking if existing category and valid number was passed
-        if (
-            (!in_array($fact_category, FactsConfig::FACTS_CATEGORIES))
-            ||
-            ($fact_number < FactsConfig::MIN_FACT_NUMBER || $fact_number > FactsConfig::MAX_FACT_NUMBER)
-        ) {
+        $category_verification = FactCategoryVerifier::verify($fact_category);
+        $number_verification = FactNumberVerifier::verify($fact_number);
+        if (!$category_verification || !$number_verification) {
             return redirect()->route('404');
         }
 
