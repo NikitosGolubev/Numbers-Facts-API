@@ -37,6 +37,6 @@ class IndexController extends Controller
         $converter = new FactNumberToLeadingZerosConverter;
         $response->number = $converter->forward($response->number);
 
-        return view('index')->with('response', $response);
+        return view('index.index')->with('response', $response);
     }
 }

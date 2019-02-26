@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	<h1>404 Page not found!</h1>
-</body>
-</html>
+@extends('layouts.main')
+
+@section('title', '404 PAGE NOT FOUND')
+@section('page-description', 'Error response page')
+
+@section('head-tags')
+@endsection
+
+@section('main')
+
+@endsection
+
+@section('footer', '')
+
+@section('scripts', '')

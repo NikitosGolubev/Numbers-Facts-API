@@ -42,6 +42,11 @@ class FactsApiController extends Controller
      * @return Void Prints JSON
      */
     public function getFactFromRandomCat($fact_number) {
+        // checking if valid number was passed
+        if ($fact_number < FactsConfig::MIN_FACT_NUMBER || $fact_number > FactsConfig::MAX_FACT_NUMBER) {
+            return redirect()->route('404');
+        }
+
         $api = new ConcreteFactFromRandomCatApi;
         $response = $api->get(['number' => $fact_number]);
         echo $response;
@@ -65,8 +70,12 @@ class FactsApiController extends Controller
      * @return Void Prints JSON
      */
     public function getFactFromConcreteCat($fact_category, $fact_number) {
-        // checking if existing category was passed
-        if (!in_array($fact_category, FactsConfig::FACTS_CATEGORIES)) {
+        // checking if existing category and valid number was passed
+        if (
+            (!in_array($fact_category, FactsConfig::FACTS_CATEGORIES))
+            ||
+            ($fact_number < FactsConfig::MIN_FACT_NUMBER || $fact_number > FactsConfig::MAX_FACT_NUMBER)
+        ) {
             return redirect()->route('404');
         }
 
