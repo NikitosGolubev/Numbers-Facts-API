@@ -22,8 +22,14 @@ ul, ol
 
 /* Styling of often-used core elements */
 
+/* Page body */
 .page-body
     padding: 4vmin 10vmin
+
+/* Page header */
+.page-header
+    &__github-link
+        margin-top: 1vh
 
 /* Links */
 .link
@@ -37,6 +43,14 @@ ul, ol
 
     &:active
         color: color(muted)
+
+.primary-link
+    color: color(primary)
+    @extend %fastTransition
+
+    &:hover
+        opacity: 0.6
+
 
 /* Headers */
 

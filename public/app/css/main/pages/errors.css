@@ -1,0 +1,37 @@
+/**
+ * Retrives color from "colors" map
+ *
+ * @param  {String} $color_name Color key
+ * @return {Null|Color}
+ */
+/**
+ * Retrives font from "fonts" map
+ *
+ * @param  {String} $font_name Font key
+ * @return {Null|String}
+ */
+/**
+ * Sets background image
+ *
+ * @param {String} $path_to_bg - path to background image
+ * @param {String} $bg_settings = "" - properties that can be added to bg,
+ *     for instance: "center center no-repeat"
+ * @param {Boolean} $is_default = true - if it's true than it's assumed that path
+ *     to images folder starts from exit of current folder
+ * @param {Color} $default_color = transparent - bg color under bg img
+ */
+.error-response {
+  text-align: center;
+  margin-top: 3vh; }
+  .error-response__code {
+    font-weight: bold;
+    font-size: 35vmin;
+    color: #ff0000;
+    line-height: 0.75; }
+  .error-response__message {
+    font-family: "Dobrozrachniy";
+    font-size: 20vmin;
+    line-height: 0.75; }
+  .error-response__link {
+    z-index: 1;
+    margin-top: 5vmin; }

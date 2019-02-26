@@ -25,10 +25,6 @@
  *     to images folder starts from exit of current folder
  * @param {Color} $default_color = transparent - bg color under bg img
  */
-/* Page header */
-.page-header__github-link {
-  margin-top: 1vh; }
-
 /* Facts interface */
 .facts-interface {
   margin-top: 7vh; }

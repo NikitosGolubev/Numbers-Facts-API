@@ -1,4 +1,4 @@
-.link, .arrow, .btn, .field {
+.link, .primary-link, .arrow, .btn, .field {
   -webkit-transition: 0.2s all;
   -o-transition: 0.2s all;
   transition: 0.2s all; }
@@ -46,8 +46,13 @@ ul, ol {
   margin: 0; }
 
 /* Styling of often-used core elements */
+/* Page body */
 .page-body {
   padding: 4vmin 10vmin; }
+
+/* Page header */
+.page-header__github-link {
+  margin-top: 1vh; }
 
 /* Links */
 .link {
@@ -58,6 +63,11 @@ ul, ol {
     opacity: 0.7; }
   .link:active {
     color: #a1a1a1; }
+
+.primary-link {
+  color: #ff0000; }
+  .primary-link:hover {
+    opacity: 0.6; }
 
 /* Headers */
 h1, h2, h3, h4, h5, h6,

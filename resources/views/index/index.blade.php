@@ -4,7 +4,7 @@
 @section('page-description', 'Get facts related to particular numbers')
 
 @section('head-tags')
-    <link href="app/css/main/pages/index.css" rel="stylesheet" type='text/css' />
+    <link href="/app/css/main/pages/index.css" rel="stylesheet" type='text/css' />
 @endsection
 
 @section('main')
