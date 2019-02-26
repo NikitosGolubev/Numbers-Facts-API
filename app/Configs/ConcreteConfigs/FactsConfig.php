@@ -33,8 +33,8 @@ class FactsConfig implements Config {
      */
     const FACTS_EMPTY_MESSAGIES = [
         "This number is boring: ", // .$number
-        "We couldn't find the fact to number ",
-        "I wish we would have approptiate fact to following number: "
+        "We couldn't find the fact for number ",
+        "I wish we would have an appropriate fact for following number: "
     ];
     
     /**
