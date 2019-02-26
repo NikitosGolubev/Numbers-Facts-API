@@ -1,0 +1,44 @@
+<?php
+
+namespace App\Services\Api\FetchingSingleFact;
+
+use App\Services\Api\Api;
+use App\Services\Api\FetchingSingleFact\FetchingSingleFact;
+
+/**
+ * Gets fact with random fact number in particular category
+ * 
+ * @api
+ */
+class RandomFactFromConcreteCatApi extends FetchingSingleFact implements Api {
+    /**
+     * Gets random fact from particular category. Returns JSON.
+     *
+     * REQUIRED: $data[category] - category where fact should be searched
+     * 
+     * @param  Array $data
+     * @return String
+     */
+    public function get(Array $data = []) {
+        $fact_category = $data['category'];
+
+        // Details db request that fact should be appropriate to provided category
+        $this->dbFactsGetter->whereCategory($fact_category);
+        // Implements db request
+        $query_results = $this->dbFactsGetter->get();
+
+        // Handles the result, returns false or data with fact
+        $response = $this->dbFactRB->build($query_results);
+
+        // if false, than nothing were found
+        if (!$response) {
+            $response = $this->notFoundFactInCategoryRB->build(
+                ['number' => "0", 'category' => $fact_category]
+            ); 
+        } else {
+            $response = $this->successRB->build($response);
+        }
+        
+        return $response;
+    }
+}

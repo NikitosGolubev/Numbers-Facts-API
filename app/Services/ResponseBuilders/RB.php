@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Services\ResponseBuilders;
+
+use App\Services\ResponseBuilders\ResponseBuilder;
+
+/**
+ * Just a non-decorator class. Starting point, which allows to create chains of decorators.
+ */
+class RB implements ResponseBuilder {
+    /**
+     * As it's clear starting point. It just returns the data that was passed inside it.
+     * @param  Mixed $data
+     * @return Mixed
+     */
+    public function build($data) {
+        return $data;
+    }
+}

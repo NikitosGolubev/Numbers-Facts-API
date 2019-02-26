@@ -1,0 +1,30 @@
+{
+  "name": "facts_about_numbers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Nikita Golubev",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5",
+    "browser-sync": "^2.24.6",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.1",
+    "imagemin-pngquant": "^6.0.0",
+    "jsdoc": "^3.5.5"
+  },
+  "dependencies": {
+    "bootstrap": "^4.2.1"
+  }
+}

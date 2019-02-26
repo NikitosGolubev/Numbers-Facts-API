@@ -1,0 +1,57 @@
+@import ../settings
+
+/* Page header */
+.page-header
+    &__github-link
+        margin-top: 1vh
+
+/* Facts interface */
+.facts-interface
+    margin-top: 7vh
+
+    &__element
+        margin: 0 1vw
+    
+    &__fact-number
+        font-size: 26vmin
+        font-family: font(alternative)
+        line-height: 0.8
+        color: color(primary)
+        margin-bottom: 7vh
+        user-select: none
+        cursor: pointer
+        @extend %fastTransition
+
+        &:hover
+            opacity: 0.6
+
+
+    &__fact
+        border: 0.3vmax solid color(alternative)
+        min-height: 25vh
+        width: 40vw
+        padding: 0.5vmax
+
+        &_wrap
+            background-color: color(secondary)
+            padding: 1vmax
+
+    &__type-fact-num-field
+        width: 100%
+        &_wrap
+            margin-top: 2vh
+
+    &__fact-category
+        background-color: color(secondary)
+        cursor: pointer
+        text-align: center
+        padding: 1vmin 6vmin
+        margin: 0.6vh 0
+        @extend %fastTransition
+
+        &_active, &:hover
+            background-color: color(primary)
+            color: color(alternative)
+
+        &:active, &_active
+            opacity: 0.6

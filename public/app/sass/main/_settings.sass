@@ -1,0 +1,86 @@
+// * System *
+// Way out of root folder(where all unique css files are stored)
+$root_folder_depth: "../../"
+
+// * Colors *
+$colors: (default: #333, alternative: #fff, primary: #ff0000, muted: #a1a1a1, secondary: #eaeaea)
+
+// * Fonts *
+$fonts_paths: (alternative: "#{$root_folder_depth}fonts/Dobrozrachniy-Regular.ttf")
+$fonts: (main-font: 'Times New Roman', alternative: 'Dobrozrachniy')
+
+// * Font-sizes *
+
+// Common text
+$small_font_size: 2.1vmin
+$default_font_size: 2.8vmin
+$medium_font_size: 3vmin
+$big_font_size: 3.5vmin
+$super_big_font_size: 4vmin
+// Headers
+$h1_font_size: 10vmin
+$h2_font_size: 8vmin
+$h3_font_size: 6.5vmin
+$h4_font_size: 5vmin
+$h5_font_size: 3.5vmin
+$h6_font_size: $default_font_size
+
+// * Paddings and margins *
+
+$tab_standart_padding: 8vw
+$tab_shorten_padding: 6vw
+
+// * Bases *
+
+// * Transitions *
+%fastTransition
+    transition: 0.2s all
+
+%mediumTransition
+    transition: 0.4s all
+
+%slowTransition
+    transition: 0.8s all
+
+// * Useful mixins and functions *
+
+/**
+ * Retrives color from "colors" map
+ * 
+ * @param  {String} $color_name Color key
+ * @return {Null|Color}
+ */
+@function color($color_name)
+    @if (map-has-key($colors, $color_name))
+    @return map-get($colors, $color_name)
+
+    @warn "Unknown `#{$color_name}` in $colors"
+    @return null
+
+/**
+ * Retrives font from "fonts" map
+ * 
+ * @param  {String} $font_name Font key
+ * @return {Null|String}
+ */
+@function font($font_name)
+    @if (map-has-key($fonts, $font_name))
+    @return map-get($fonts, $font_name)
+
+    @warn "Unknown `#{$font_name}` in $fonts"
+    @return null
+
+/**
+ * Sets background image
+ * 
+ * @param {String} $path_to_bg - path to background image
+ * @param {String} $bg_settings = "" - properties that can be added to bg,
+ *     for instance: "center center no-repeat"
+ * @param {Boolean} $is_default = true - if it's true than it's assumed that path 
+ *     to images folder starts from exit of current folder
+ * @param {Color} $default_color = transparent - bg color under bg img
+ */
+@mixin setBgImg($path_to_bg, $bg_settings: "", $is_default: true, $default_color: transparent)
+    @if $is_default
+        $path_to_bg: $root_folder_depth + $path_to_bg
+    background: $default_color url($path_to_bg) #{$bg_settings}
