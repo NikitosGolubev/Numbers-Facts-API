@@ -1,0 +1,55 @@
+/**
+ * Retrives color from "colors" map
+ *
+ * @param  {String} $color_name Color key
+ * @return {Null|Color}
+ */
+/**
+ * Retrives font from "fonts" map
+ *
+ * @param  {String} $font_name Font key
+ * @return {Null|String}
+ */
+/**
+ * Sets background image
+ *
+ * @param {String} $path_to_bg - path to background image
+ * @param {String} $bg_settings = "" - properties that can be added to bg,
+ *     for instance: "center center no-repeat"
+ * @param {Boolean} $is_default = true - if it's true than it's assumed that path
+ *     to images folder starts from exit of current folder
+ * @param {Color} $default_color = transparent - bg color under bg img
+ */
+@media screen and (max-aspect-ratio: 1000 / 800) {
+  /* Facts interface */
+  .facts-interface {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 1vh; }
+    .facts-interface__number-container {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row; }
+    .facts-interface__fact-number {
+      margin-top: 0;
+      margin-left: 2vw;
+      margin-right: 2vw;
+      margin-bottom: 4vh; }
+    .facts-interface__fact {
+      width: 90vw; }
+    .facts-interface__fact-category {
+      margin: 0; }
+    .facts-interface__facts-cats-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1vmin; }
+      .facts-interface__facts-cats-list_wrap {
+        margin-top: 2vh; }
+  /* API reference */
+  .api-documentation {
+    margin-top: 4vh; } }

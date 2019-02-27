@@ -1,0 +1,59 @@
+/**
+ * Retrives color from "colors" map
+ *
+ * @param  {String} $color_name Color key
+ * @return {Null|Color}
+ */
+/**
+ * Retrives font from "fonts" map
+ *
+ * @param  {String} $font_name Font key
+ * @return {Null|String}
+ */
+/**
+ * Sets background image
+ *
+ * @param {String} $path_to_bg - path to background image
+ * @param {String} $bg_settings = "" - properties that can be added to bg,
+ *     for instance: "center center no-repeat"
+ * @param {Boolean} $is_default = true - if it's true than it's assumed that path
+ *     to images folder starts from exit of current folder
+ * @param {Color} $default_color = transparent - bg color under bg img
+ */
+/* Adjusting font sizes */
+@media screen and (max-aspect-ratio: 1000 / 800) {
+  body {
+    font-size: 2.3vmax; }
+  /* Headers */
+  .h1, h1 {
+    font-size: 5vmax; }
+  .h2, h2 {
+    font-size: 4.3vmax; }
+  .h3, h3 {
+    font-size: 4vmax; }
+  .h4, h4 {
+    font-size: 3vmax; }
+  .h5, h5 {
+    font-size: 2.6vmax; }
+  .h6, h6 {
+    font-size: 2.3vmax; }
+  /* font size and transformations */
+  .text_small-sz {
+    font-size: 1.9vmax; }
+  .text_default-sz {
+    font-size: 2.3vmax; }
+  .text_medium-sz {
+    font-size: 2.5vmax; }
+  .text_big-sz {
+    font-size: 2.7vmax; }
+  .text_super-big-sz {
+    font-size: 3.2vmax; }
+  /* Inputs, fields */
+  .field {
+    font-size: 2.3vmax; }
+  /* Lists */
+  .docs-list__header {
+    font-size: 2.7vmax; }
+  /* Code samples */
+  .code-sample {
+    font-size: 1.9vmax; } }

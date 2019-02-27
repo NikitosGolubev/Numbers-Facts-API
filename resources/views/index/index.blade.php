@@ -8,12 +8,13 @@
 
 @section('head-tags')
     <link href="/app/css/main/pages/index.css" rel="stylesheet" type='text/css' />
+    <link href="/app/css/main/media/pages/index.css" rel="stylesheet" type='text/css' />
 @endsection
 
 @section('main')
     <div class='facts-interface d-flex align-items-center justify-content-center'>
         <div class='facts-interface__element'>
-        	<div class='facts-interface__number-container d-flex flex-column align-items-center'>
+        	<div class='facts-interface__number-container d-flex align-items-center'>
         		<div class='js-increase-fact-number btn btn_alternative btn_round'>
         			<svg class='arrow arrow__up arrow_primary' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 284.929 284.929" style="enable-background:new 0 0 284.929 284.929;" xml:space="preserve">
 						<path d="M282.082,195.285L149.028,62.24c-1.901-1.903-4.088-2.856-6.562-2.856s-4.665,0.953-6.567,2.856L2.856,195.285 C0.95,197.191,0,199.378,0,201.853c0,2.474,0.953,4.664,2.856,6.566l14.272,14.271c1.903,1.903,4.093,2.854,6.567,2.854 c2.474,0,4.664-0.951,6.567-2.854l112.204-112.202l112.208,112.209c1.902,1.903,4.093,2.848,6.563,2.848 c2.478,0,4.668-0.951,6.57-2.848l14.274-14.277c1.902-1.902,2.847-4.093,2.847-6.566 C284.929,199.378,283.984,197.188,282.082,195.285z"/>
@@ -117,14 +118,14 @@
             <p><span class='h3'>Response structure:</span></p>
             <p>
                 You would receive JSON response with following structure:
-<pre class='code-sample'>
-{
-    "fact": "Returned fact",
-    "number": "Number (If not found in particular category => 0)",
-    "category": "Fact category (If not passed => "Doesn't matter")",
-    "notFound": "true or false"
-}
-</pre>
+                <div class='code-sample'>
+                {<br />
+                    "fact": "Returned fact",<br />
+                    "number": "Number (If not found in particular category => 0)",<br />
+                    "category": "Fact category (If not passed => "Doesn't matter")",<br />
+                    "notFound": "true or false"<br />
+                }
+                </div>
             </p>
         </div>
     </div>

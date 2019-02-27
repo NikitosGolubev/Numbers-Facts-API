@@ -30,6 +30,12 @@
   margin-top: 7vh; }
   .facts-interface__element {
     margin: 0 1vw; }
+  .facts-interface__number-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
   .facts-interface__fact-number {
     font-size: 26vmin;
     font-family: "Dobrozrachniy";
@@ -67,6 +73,7 @@
     .facts-interface__fact-category:active, .facts-interface__fact-category_active {
       opacity: 0.6; }
 
+/* API reference */
 .api-documentation {
   margin-top: 7vh;
   border-top: 2px dashed #a1a1a1; }
