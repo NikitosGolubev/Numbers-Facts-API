@@ -42,47 +42,83 @@ class NumberFactsView {
         this.increaseFactNumberBtn = document.querySelector('.js-increase-fact-number');
         this.decreaseFactNumberBtn = document.querySelector('.js-decrease-fact-number');
         this.typeFactNumField = document.querySelector('.js-type-fact-num-field');
+
+        this.factNumberContainer = document.querySelector('.js-fact-number');
+        this.factContainer = document.querySelector('.js-fact');
+
+        this.currentFactCatContainer = document.querySelector('.js-current-fact-category');
+
+        // Useful class names
+        this.factCategoryClassName = 'js-fact-category';
+        this.activeCatElemClassName = 'facts-interface__fact-category_active';
+
+
         
         // Initializing model
         this.model = model;
         // Registering view as observer of model
         this.model.registerFactNumberObserver(this);
+        this.model.registerFactCategoryObserver(this);
     }
 
     /**
-     * Method that is called(by subject) when fact number changes.
-     * Updates fact number visually everywhere, where it's displayed.
+     * Method that is called(by subject) when fact data changes.
+     * Updates fact data visually everywhere, where it's displayed.
      * 
      * @param  {String} factNumber Formated fact number, ready to appear to user.
      * @returns {Void}
      */
-    updateFactNumber(factNumber) {
-    	// getting all places where fact number is displayed
-        let factNumberContainers = document.querySelectorAll('.js-fact-number');
+    updateFactNumber(data) {
+        this.factNumberContainer.innerText = data.number;
+        this.factContainer.innerText = data.fact;
+    }
 
-        // updating with new one...
-        for (let i = 0; i &lt; factNumberContainers.length; i++) {
-            factNumberContainers[i].innerText = factNumber;
-        }
+    /**
+     * Updates view of fact category menu. (changes active elements if needed).
+     * Also changes current-fact-category attr value.     *
+     * 
+     * @param  {String} category Changed fact category.
+     * @returns {Void}
+     */
+    updateFactCategory(category) {
+        this.currentFactCatContainer.setAttribute('current-fact-category', category);
+
+        let oldActiveCatElem = document.querySelector('.'+this.activeCatElemClassName);
+        oldActiveCatElem.classList.remove(this.activeCatElemClassName);
+
+        let newActiveCatElem = document.querySelector(`[fact-category='${category}']`);
+        newActiveCatElem.classList.add(this.activeCatElemClassName);
     }
 
     /**
      * Returns DOM element: IncreaseFactNumberBtn. (Getter)
-     * @return {Object} DOM.
+     * @returns {Object} DOM
      */
     getIncreaseFactNumberBtn() {return this.increaseFactNumberBtn;}
 
     /**
      * Returns DOM element: DecreaseFactNumberBtn. (Getter)
-     * @return {Object} DOM.
+     * @returns {Object} DOM
      */
     getDecreaseFactNumberBtn() {return this.decreaseFactNumberBtn;}
 
     /**
      * Returns DOM element: TypeFactNumField. (Getter)
-     * @return {Object} DOM.
+     * @returns {Object} DOM
      */
     getTypeFactNumField() {return this.typeFactNumField;}
+
+    /**
+     * Returns DOM element: FactNumberContainer. (Getter)
+     * @returns {Object} DOM
+     */
+    getFactNumberContainer() {return this.factNumberContainer;}
+
+    /**
+     * Returns class name of fact category container(-s)
+     * @returns {String}
+     */
+    getFactCategoryClassName() {return this.factCategoryClassName;}
 }
 </code></pre>
         </article>
@@ -94,13 +130,13 @@ class NumberFactsView {
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="DomOptimizer.html">DomOptimizer</a></li><li><a href="NumberFactsController.html">NumberFactsController</a></li><li><a href="NumberFactsModel.html">NumberFactsModel</a></li><li><a href="NumberFactsView.html">NumberFactsView</a></li></ul><h3>Namespaces</h3><ul><li><a href="NikitosGolubev.html">NikitosGolubev</a></li><li><a href="NikitosGolubev_Changers.html">NikitosGolubev\Changers</a></li><li><a href="NikitosGolubev_Controllers.html">NikitosGolubev\Controllers</a></li><li><a href="NikitosGolubev_Models.html">NikitosGolubev\Models</a></li><li><a href="NikitosGolubev_Starters.html">NikitosGolubev\Starters</a></li><li><a href="NikitosGolubev_Views.html">NikitosGolubev\Views</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="DomOptimizer.html">DomOptimizer</a></li><li><a href="NumberFactsController.html">NumberFactsController</a></li><li><a href="NumberFactsModel.html">NumberFactsModel</a></li><li><a href="NumberFactsView.html">NumberFactsView</a></li></ul><h3>Namespaces</h3><ul><li><a href="NikitosGolubev.html">NikitosGolubev</a></li><li><a href="NikitosGolubev_Changers.html">NikitosGolubev\Changers</a></li><li><a href="NikitosGolubev_Controllers.html">NikitosGolubev\Controllers</a></li><li><a href="NikitosGolubev_Models.html">NikitosGolubev\Models</a></li><li><a href="NikitosGolubev_Starters.html">NikitosGolubev\Starters</a></li><li><a href="NikitosGolubev_Views.html">NikitosGolubev\Views</a></li></ul><h3>Global</h3><ul><li><a href="global.html#findParentByClassName">findParentByClassName</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Feb 10 2019 19:44:45 GMT+0300 (RTZ 2 (зима))
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Feb 27 2019 23:49:27 GMT+0300 (RTZ 2 (зима))
 </footer>
 
 <script> prettyPrint(); </script>

@@ -1,5 +1,5 @@
 // Base command
-// jsdoc -c C:/Users/Nikitos/Desktop/Homestead/projects/facts-about-numbers/public/jsdoc.json -r
+// jsdoc -c C:/Users/Nikitos/Desktop/GitHubProjects/Numbers-Facts-API/public/jsdoc.json -r
 {
     "plugins": [
         "plugins/markdown"

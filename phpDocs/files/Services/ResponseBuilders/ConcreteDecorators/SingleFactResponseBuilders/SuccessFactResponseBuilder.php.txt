@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Services\ResponseBuilders\ConcreteDecorators\SingleFactResponseBuilders;
+
+use App\Services\ResponseBuilders\ResponseBuilder;
+use App\Services\ResponseBuilders\ConcreteDecorators\SingleFactResponseBuilders\SingleFactResponseBuilder;
+
+/**
+ * Decorator
+ */
+class SuccessFactResponseBuilder extends SingleFactResponseBuilder implements
+    ResponseBuilder
+{
+    /**
+     * Forming SUCCESS response (fact was succesfully found and fetched).
+     * @param  Array|Object $data Fact data
+     * @return String|False
+     */
+    public function build($data) {
+        $this->setFact($data->fact);
+        $this->setNumber($data->number);
+        $this->setCategory($data->category);
+        $this->setNotFound(false);
+
+        return parent::build($data);
+    }
+}
+

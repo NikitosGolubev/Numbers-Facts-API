@@ -1,0 +1,35 @@
+@import ../../settings
+
+@media screen and (max-aspect-ratio: 1000/800)
+    /* Facts interface */
+    .facts-interface
+        flex-direction: column
+        margin-top: 1vh
+
+        &__number-container
+            flex-direction: row
+
+        &__fact-number
+            margin:
+                top: 0
+                left: 2vw
+                right: 2vw
+                bottom: 4vh
+
+        &__fact
+            width: 90vw
+
+        &__fact-category
+            margin: 0
+        
+        &__facts-cats-list
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 1vmin
+
+            &_wrap
+                margin-top: 2vh
+
+    /* API reference */
+    .api-documentation
+        margin-top: 4vh

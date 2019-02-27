@@ -1,0 +1,36 @@
+<?php
+
+namespace App\Services\ResponseBuilders\ConcreteDecorators;
+
+use App\Services\ResponseBuilders\ResponseBuilder;
+use App\Services\ResponseBuilders\ResponseBuilderDecorator;
+use App\Services\RandomService;
+
+/**
+ * Decorator
+ * @uses  RandomService
+ */
+class FactsDataSingleRecordBuilder extends ResponseBuilderDecorator implements
+    ResponseBuilder
+{
+    /**
+     * Handles the array with facts data that was fetched from DB.
+     * 
+     * Returns false, if array is empty. If there's only 1 record,
+     * than it'll be retured. If array contains multiple records, than
+     * random one would be picked and returned.
+     * 
+     * @param  Array $data Results after DB select.
+     * @return Object|False
+     */
+    public function build($data) {
+        if (empty($data)) {
+            $data = false; // no records
+        } else if (count($data) > 1) {
+            $data = RandomService::getRandomItemFromIndexedArray($data); // more than 1 records
+        } else $data = $data[0]; // single match
+
+        return parent::build($data);
+    }
+}
+

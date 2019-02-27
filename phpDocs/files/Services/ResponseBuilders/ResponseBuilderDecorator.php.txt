@@ -1,0 +1,31 @@
+<?php
+
+namespace App\Services\ResponseBuilders;
+
+use App\Services\ResponseBuilders\ResponseBuilder;
+
+/**
+ * Abstract decorator. Should be extended by concrete decorators.
+ */
+abstract class ResponseBuilderDecorator implements ResponseBuilder {
+    /**
+     * Stores the link on object that should be decorated
+     * @var Object
+     */
+    protected $rb;
+
+    public function __construct(ResponseBuilder $rb) {
+        // Saves link on object for further decoration
+        $this->rb = $rb;
+    }
+
+    /**
+     * Returns the result of calling "build" method on decorated obj.
+     * @param  Mixed $data
+     * @return Mixed
+     */
+    public function build($data) {
+        return $this->rb->build($data);
+    }
+}
+

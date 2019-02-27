@@ -1,0 +1,1 @@
+"use strict";function starterWorker(){(new DomOptimizer).fixTargetBlank()}function findParentByClassName(r,t){if(r.classList.contains(t))return r;for(var e=r.parentNode;!e.classList.contains(t);){if("HTML"===e.tagName)return!1;e=e.parentNode}return e}window.addEventListener("load",starterWorker);

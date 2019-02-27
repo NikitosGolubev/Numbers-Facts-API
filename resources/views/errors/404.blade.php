@@ -4,7 +4,7 @@
 @section('page-description', 'Error response page')
 
 @section('head-tags')
-    <link rel="stylesheet" type="text/css" href="/app/css/main/pages/errors.css" />
+    <link rel="stylesheet" type="text/css" href="/{{ env('TEMPLATE_DIR') }}/css/main/pages/errors.css" />
 @endsection
 
 @section('main')

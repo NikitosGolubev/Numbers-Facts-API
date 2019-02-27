@@ -38,9 +38,13 @@
  */
 class NumberFactsModel {
     constructor() {
-        // Observers storage
+        // Observers storages
         this.factNumberObservers = [];
-        // Getting starter number fact value
+        this.factCategoryObservers = [];
+        /**
+         * Fact number to which fact should relate
+         * @type {Number}
+         */
         this.factNumber = this.getStarterFactNumberFromDOM();
 
         /**
@@ -48,6 +52,12 @@ class NumberFactsModel {
          * @type {Number}
          */
         this.maxNumberLen = 4;
+
+        /**
+         * Current fact category to which facts should relate
+         * @type {String}
+         */
+        this.factCategory = this.getCurrentFactCategoryDOM();
     }
 
     /**
@@ -73,16 +83,21 @@ class NumberFactsModel {
     }
 
     /**
-     * Notifing observers about change of fact number.
+     * Notifing observers about change of fact data.
      * 
-     * @param  {Number} factNumber
+     * @param  {data} Object with fact data
      * @returns {Void}
      */
-    notifyFactNumberObservers(factNumber) {
+    notifyFactNumberObservers(data) {
+        // If INTEGER was returned(maybe inside string, like "23")
         // Number should be displayed in following format 0023, converting...
-        factNumber = this.convertToNumberWithForwardZeros(factNumber);
+        if (Number.isInteger(+data.number)) {
+            data.number = this.convertToNumberWithForwardZeros(data.number);
+        }
+
+        // notifying observers
         for (let i = 0; i &lt; this.factNumberObservers.length; i++) {
-            this.factNumberObservers[i].updateFactNumber(factNumber);
+            this.factNumberObservers[i].updateFactNumber(data);
         }
     }
 
@@ -95,12 +110,120 @@ class NumberFactsModel {
     /**
      * Sets new fact number
      * @param {Number} factNumber
+     * @returns {Void}
      */
     setFactNumber(factNumber) {
+        console.log(factNumber);
         // Sometimes factNumber may not be valid here, so it's worth to validate it first.
         this.factNumber = this.alignFactNumberWithLimit(factNumber);
-        // Fact number has changed, so we should notify observers about this.
-        this.notifyFactNumberObservers(this.factNumber);
+
+        // AS we know what number we're dealing with, then we can request it
+        // Sending request to server to get data
+        this.getFactWithConcreteNumber();
+    }
+
+    /**
+     * Sends requets that retrives fact with RANDOM fact number from particular category.
+     * @returns {Void}
+     */
+    getFactWithRandomNumber() {
+        let uri = `api/${this.factCategory}`;
+        // As we don't know what number was generated yet, so we retrive it from
+        // response and update current fact number as it was already set.
+        this.getFactData(uri).then(data => this.factNumber = data.number);
+    }
+
+    /**
+     * Sends requets that retrives fact with CONCRETE fact number from particular category.
+     * @return {Void}
+     */
+    getFactWithConcreteNumber() {
+        let uri = `api/${this.factCategory}/${this.factNumber}`;
+        this.getFactData(uri);
+    }
+
+    /**
+     * Sends request to server to retrive fact data and then notifies observers about fetched data.
+     * @param  {String} uri
+     * @return {Object} Promise with data
+     */
+    getFactData(uri) {
+        return fetch(uri)
+        .then(response => response.json())
+        .then(data => {
+            this.notifyFactNumberObservers(data);
+            return data;
+        })
+        .catch(err => console.log(err));
+    }
+
+    /**
+     * Registers observer.
+     *
+     * @param  {Object} observer Usually view object.
+     * @returns {Void}
+     */
+    registerFactCategoryObserver(observer) {
+        this.factCategoryObservers.push(observer); 
+    }
+
+    /**
+     * Removes observer from container.
+     * @param  {Object} observer
+     * @returns {Void}
+     */
+    removeFactCategoryObserver(observer) {
+        // Searching for observer
+        let indexOfObserver = this.factCategoryObservers.indexOf(observer);
+        // Removing observer
+        this.factCategoryObservers.splice(indexOfObserver, 1);
+    }
+
+    /**
+     * Notifing observers about change of fact category.
+     * 
+     * @param  {Number} factNumber
+     * @returns {Void}
+     */
+    notifyFactCategoryObservers(category) {
+        // notifying observers
+        for (let i = 0; i &lt; this.factCategoryObservers.length; i++) {
+            this.factCategoryObservers[i].updateFactCategory(category);
+        }
+    } 
+
+    /**
+     * Getting current fact category from attribute of HTML element.
+     * @returns {String}
+     */
+    getCurrentFactCategoryDOM() {
+        // Finding container of current fact cat
+        let factCatStorage = document.querySelector('.js-current-fact-category');
+        // Fetching it
+        let currentFactCat = factCatStorage.getAttribute('current-fact-category');
+        return currentFactCat;
+    }
+
+    /**
+     * Checks if category changed, if so updates it. Than sends request
+     * to get random fact from this category.
+     * 
+     * @param  {Object} categoryControlBtn DOM
+     * @returns {Void}
+     */
+    chooseCategoryAndGetFact(categoryControlBtn) {
+        let chosenCategory = categoryControlBtn.getAttribute('fact-category');
+        if (chosenCategory !== this.factCategory) this.setCurrentFactCategory(chosenCategory);
+        this.getFactWithRandomNumber();
+    }
+
+    /**
+     * Changes current fact category and notifies observers about it.
+     * @param {String} category
+     */
+    setCurrentFactCategory(category) {
+        this.factCategory = category;
+        this.notifyFactCategoryObservers(category);
     }
 
     /**
@@ -143,12 +266,17 @@ class NumberFactsModel {
      * @returns {Void}
      */
     setTypedFactNumber(event) {
-        // getting fields value
-        let numberFromField = +event.target.value;
-        // Setting it
-        this.setFactNumber(numberFromField);
-        // Empties field
-        event.target.value = "";
+        // if empty field was passed, so there are no number inside it
+        if (event.target.value !== '') {
+            // getting fields value
+            let numberFromField = +event.target.value;
+            // Setting it
+            this.setFactNumber(numberFromField);
+            // Empties field
+            event.target.value = "";
+            // Removing focus from field
+            document.activeElement.blur();
+        }
     }
 
     /**
@@ -231,13 +359,13 @@ class NumberFactsModel {
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="DomOptimizer.html">DomOptimizer</a></li><li><a href="NumberFactsController.html">NumberFactsController</a></li><li><a href="NumberFactsModel.html">NumberFactsModel</a></li><li><a href="NumberFactsView.html">NumberFactsView</a></li></ul><h3>Namespaces</h3><ul><li><a href="NikitosGolubev.html">NikitosGolubev</a></li><li><a href="NikitosGolubev_Changers.html">NikitosGolubev\Changers</a></li><li><a href="NikitosGolubev_Controllers.html">NikitosGolubev\Controllers</a></li><li><a href="NikitosGolubev_Models.html">NikitosGolubev\Models</a></li><li><a href="NikitosGolubev_Starters.html">NikitosGolubev\Starters</a></li><li><a href="NikitosGolubev_Views.html">NikitosGolubev\Views</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="DomOptimizer.html">DomOptimizer</a></li><li><a href="NumberFactsController.html">NumberFactsController</a></li><li><a href="NumberFactsModel.html">NumberFactsModel</a></li><li><a href="NumberFactsView.html">NumberFactsView</a></li></ul><h3>Namespaces</h3><ul><li><a href="NikitosGolubev.html">NikitosGolubev</a></li><li><a href="NikitosGolubev_Changers.html">NikitosGolubev\Changers</a></li><li><a href="NikitosGolubev_Controllers.html">NikitosGolubev\Controllers</a></li><li><a href="NikitosGolubev_Models.html">NikitosGolubev\Models</a></li><li><a href="NikitosGolubev_Starters.html">NikitosGolubev\Starters</a></li><li><a href="NikitosGolubev_Views.html">NikitosGolubev\Views</a></li></ul><h3>Global</h3><ul><li><a href="global.html#findParentByClassName">findParentByClassName</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Feb 10 2019 19:44:45 GMT+0300 (RTZ 2 (зима))
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Feb 27 2019 23:49:27 GMT+0300 (RTZ 2 (зима))
 </footer>
 
 <script> prettyPrint(); </script>

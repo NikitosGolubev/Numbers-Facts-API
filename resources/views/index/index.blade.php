@@ -7,8 +7,8 @@
 @section('page-description', 'Get facts related to particular numbers')
 
 @section('head-tags')
-    <link href="/app/css/main/pages/index.css" rel="stylesheet" type='text/css' />
-    <link href="/app/css/main/media/pages/index.css" rel="stylesheet" type='text/css' />
+    <link href="/{{ env('TEMPLATE_DIR') }}/css/main/pages/index.css" rel="stylesheet" type='text/css' />
+    <link href="/{{ env('TEMPLATE_DIR') }}/css/main/media/pages/index.css" rel="stylesheet" type='text/css' />
 @endsection
 
 @section('main')
@@ -134,8 +134,8 @@
 @section('footer', '')
 
 @section('scripts')
-    <script src='app/js/main/models/number-facts-model.js'></script>
-    <script src='app/js/main/views/number-facts-view.js'></script>
-    <script src='app/js/main/controllers/number-facts-controller.js'></script>
-    <script src='app/js/main/starters/number-facts-starter.js'></script>
+    <script src='{{ env('TEMPLATE_DIR') }}/js/main/models/number-facts-model.js'></script>
+    <script src='{{ env('TEMPLATE_DIR') }}/js/main/views/number-facts-view.js'></script>
+    <script src='{{ env('TEMPLATE_DIR') }}/js/main/controllers/number-facts-controller.js'></script>
+    <script src='{{ env('TEMPLATE_DIR') }}/js/main/starters/number-facts-starter.js'></script>
 @endsection

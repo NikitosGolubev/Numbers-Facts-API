@@ -1,0 +1,64 @@
+<?php
+
+namespace App\Services;
+
+use App\Services\Service;
+use Illuminate\Support\Facades\DB;
+use App\Services\ResponseBuilders\RB;
+use App\Services\ResponseBuilders\ConcreteDecorators\DbResponseFinalArrayBuilder;
+
+/**
+ * Responsible for fetching facts from DB
+ * @uses QueryBuilder
+ * @uses RB - ResponseBuilder wrapee
+ * @uses DbResponseFinalArrayBuilder - handler for selected result
+ */
+class DbFactsGetterService implements Service {
+    /**
+     * The most usable request
+     * @var Object
+     */
+    protected $mainRequest;
+
+    public function __construct() {
+        // INNER JOINs
+        $this->mainRequest = DB::table('facts')
+            ->join('numbers', 'facts.number_id', '=', 'numbers.id')
+            ->join('categories', 'facts.cat_id', '=', 'categories.id')
+            ->select('facts.fact', 'numbers.number', 'categories.name as category');            
+    }
+
+    /**
+     * Looks only for records with particular fact number 
+     * 
+     * @param  Integer $fact_number
+     * @return Object QueryBuilder request
+     */
+    public function whereNumber($fact_number) {
+        $this->mainRequest = $this->mainRequest->where('numbers.number', $fact_number);
+    }
+
+    /**
+     * Looks only for records with particular fact category 
+     * 
+     * @param  String $fact_category
+     * @return Object QueryBuilder request
+     */
+    public function whereCategory($fact_category) {
+        $this->mainRequest = $this->mainRequest->where('categories.name', $fact_category);
+    }
+
+    /**
+     * Implements the request
+     * @return Array
+     */
+    public function get() {
+        $db_response_builder = new DbResponseFinalArrayBuilder(new RB);
+        $result_obj = $this->mainRequest->get();
+        // Format result to convinient form (Array)
+        $final_result = $db_response_builder->build($result_obj);
+        
+        return $final_result;
+    }
+}
+

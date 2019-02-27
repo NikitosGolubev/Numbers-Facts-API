@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>     &raquo; Compilation errors
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">API Documentation</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/App.html">\App</a></li>
+                                                    </ul>
+                    </li>
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">67</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+
+            <ul class="side-nav nav nav-list">
+                <li class="nav-header">Navigation</li>
+                                                                            <li><a href="#Services/Api/Api.php"><i class="icon-file"></i> Services/Api/Api.php</a></li>
+                                                                                                    <li><a href="#Services/Api/FetchingSingleFact/ConcreteFactFromConcreteCatApi.php"><i class="icon-file"></i> Services/Api/FetchingSingleFact/ConcreteFactFromConcreteCatApi.php</a></li>
+                                                                                                    <li><a href="#Services/Api/FetchingSingleFact/ConcreteFactFromRandomCatApi.php"><i class="icon-file"></i> Services/Api/FetchingSingleFact/ConcreteFactFromRandomCatApi.php</a></li>
+                                                                                                    <li><a href="#Services/Api/FetchingSingleFact/FetchingSingleFact.php"><i class="icon-file"></i> Services/Api/FetchingSingleFact/FetchingSingleFact.php</a></li>
+                                                                                                    <li><a href="#Services/Api/FetchingSingleFact/RandomFactFromConcreteCatApi.php"><i class="icon-file"></i> Services/Api/FetchingSingleFact/RandomFactFromConcreteCatApi.php</a></li>
+                                                                                                    <li><a href="#Services/Api/FetchingSingleFact/RandomFactFromRandomCatApi.php"><i class="icon-file"></i> Services/Api/FetchingSingleFact/RandomFactFromRandomCatApi.php</a></li>
+                                                                                                    <li><a href="#Services/Converters/Converter.php"><i class="icon-file"></i> Services/Converters/Converter.php</a></li>
+                                                                                                    <li><a href="#Services/Converters/FactNumberToLeadingZerosConverter.php"><i class="icon-file"></i> Services/Converters/FactNumberToLeadingZerosConverter.php</a></li>
+                                                                                                    <li><a href="#Services/DbFactsGetterService.php"><i class="icon-file"></i> Services/DbFactsGetterService.php</a></li>
+                                                                                                    <li><a href="#Services/RandomService.php"><i class="icon-file"></i> Services/RandomService.php</a></li>
+                                                                                                    <li><a href="#Services/ResponseBuilders/ConcreteDecorators/DbResponseFinalArrayBuilder.php"><i class="icon-file"></i> Services/ResponseBuilders/ConcreteDecorators/DbResponseFinalArrayBuilder.php</a></li>
+                                                                                                    <li><a href="#Services/ResponseBuilders/ConcreteDecorators/FactsDataSingleRecordBuilder.php"><i class="icon-file"></i> Services/ResponseBuilders/ConcreteDecorators/FactsDataSingleRecordBuilder.php</a></li>
+                                                                                                    <li><a href="#Services/ResponseBuilders/ConcreteDecorators/JSONResponseBuilder.php"><i class="icon-file"></i> Services/ResponseBuilders/ConcreteDecorators/JSONResponseBuilder.php</a></li>
+                                                                                                    <li><a href="#Services/ResponseBuilders/ConcreteDecorators/SingleFactResponseBuilders/NotFoundFactNumberResponseBuilder.php"><i class="icon-file"></i> Services/ResponseBuilders/ConcreteDecorators/SingleFactResponseBuilders/NotFoundFactNumberResponseBuilder.php</a></li>
+                                                                                                    <li><a href="#Services/ResponseBuilders/ConcreteDecorators/SingleFactResponseBuilders/NotFoundNumberInCategoryResponseBuilder.php"><i class="icon-file"></i> Services/ResponseBuilders/ConcreteDecorators/SingleFactResponseBuilders/NotFoundNumberInCategoryResponseBuilder.php</a></li>
+                                                                                                    <li><a href="#Services/ResponseBuilders/ConcreteDecorators/SingleFactResponseBuilders/SingleFactResponseBuilder.php"><i class="icon-file"></i> Services/ResponseBuilders/ConcreteDecorators/SingleFactResponseBuilders/SingleFactResponseBuilder.php</a></li>
+                                                                                                    <li><a href="#Services/ResponseBuilders/ConcreteDecorators/SingleFactResponseBuilders/SuccessFactResponseBuilder.php"><i class="icon-file"></i> Services/ResponseBuilders/ConcreteDecorators/SingleFactResponseBuilders/SuccessFactResponseBuilder.php</a></li>
+                                                                                                    <li><a href="#Services/ResponseBuilders/RB.php"><i class="icon-file"></i> Services/ResponseBuilders/RB.php</a></li>
+                                                                                                    <li><a href="#Services/ResponseBuilders/ResponseBuilder.php"><i class="icon-file"></i> Services/ResponseBuilders/ResponseBuilder.php</a></li>
+                                                                                                    <li><a href="#Services/ResponseBuilders/ResponseBuilderDecorator.php"><i class="icon-file"></i> Services/ResponseBuilders/ResponseBuilderDecorator.php</a></li>
+                                                                                                    <li><a href="#Services/Service.php"><i class="icon-file"></i> Services/Service.php</a></li>
+                                                                                                    <li><a href="#Services/Verifiers/FactCategoryVerifier.php"><i class="icon-file"></i> Services/Verifiers/FactCategoryVerifier.php</a></li>
+                                                                                                    <li><a href="#Services/Verifiers/FactNumberVerifier.php"><i class="icon-file"></i> Services/Verifiers/FactNumberVerifier.php</a></li>
+                                                                                                    <li><a href="#Http/Controllers/Controller.php"><i class="icon-file"></i> Http/Controllers/Controller.php</a></li>
+                                                                                                    <li><a href="#Http/Controllers/ErrorsController.php"><i class="icon-file"></i> Http/Controllers/ErrorsController.php</a></li>
+                                                                                                    <li><a href="#Http/Controllers/ExampleController.php"><i class="icon-file"></i> Http/Controllers/ExampleController.php</a></li>
+                                                                                                    <li><a href="#Http/Controllers/FactsApiController.php"><i class="icon-file"></i> Http/Controllers/FactsApiController.php</a></li>
+                                                                                                    <li><a href="#Http/Controllers/IndexController.php"><i class="icon-file"></i> Http/Controllers/IndexController.php</a></li>
+                                                                                                    <li><a href="#Configs/ConcreteConfigs/FactsConfig.php"><i class="icon-file"></i> Configs/ConcreteConfigs/FactsConfig.php</a></li>
+                                                                                                    <li><a href="#Configs/Config.php"><i class="icon-file"></i> Configs/Config.php</a></li>
+                                                                    </ul>
+        </div>
+
+        <div class="span10 offset2">
+            <ul class="breadcrumb">
+                <li><a href="../"><i class="icon-remove-sign"></i></a><span class="divider">\</span></li>
+                <li>Compilation Errors</li>
+            </ul>
+
+            
+                            <div class="package-contents">
+                                            <a name="Services/Api/Api.php" id="Services/Api/Api.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Services/Api/Api.php
+                            <small style="float: right;padding-right: 10px;">3</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>9</td>
+                                        <td>Argument $data is missing from the Docblock of get</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>9</td>
+                                        <td>No summary for method get()</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Services/Api/FetchingSingleFact/ConcreteFactFromConcreteCatApi.php" id="Services/Api/FetchingSingleFact/ConcreteFactFromConcreteCatApi.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Services/Api/FetchingSingleFact/ConcreteFactFromConcreteCatApi.php
+                            <small style="float: right;padding-right: 10px;">1</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Services/Api/FetchingSingleFact/ConcreteFactFromRandomCatApi.php" id="Services/Api/FetchingSingleFact/ConcreteFactFromRandomCatApi.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Services/Api/FetchingSingleFact/ConcreteFactFromRandomCatApi.php
+                            <small style="float: right;padding-right: 10px;">1</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Services/Api/FetchingSingleFact/FetchingSingleFact.php" id="Services/Api/FetchingSingleFact/FetchingSingleFact.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Services/Api/FetchingSingleFact/FetchingSingleFact.php
+                            <small style="float: right;padding-right: 10px;">8</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>34</td>
+                                        <td>No summary for method __construct()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>27</td>
+                                        <td>No summary for property $dbFactsGetter</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>28</td>
+                                        <td>No summary for property $rb</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>29</td>
+                                        <td>No summary for property $dbFactRB</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>30</td>
+                                        <td>No summary for property $successRB</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>31</td>
+                                        <td>No summary for property $notFoundFactRB</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>32</td>
+                                        <td>No summary for property $notFoundFactInCategoryRB</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Services/Api/FetchingSingleFact/RandomFactFromConcreteCatApi.php" id="Services/Api/FetchingSingleFact/RandomFactFromConcreteCatApi.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Services/Api/FetchingSingleFact/RandomFactFromConcreteCatApi.php
+                            <small style="float: right;padding-right: 10px;">1</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Services/Api/FetchingSingleFact/RandomFactFromRandomCatApi.php" id="Services/Api/FetchingSingleFact/RandomFactFromRandomCatApi.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Services/Api/FetchingSingleFact/RandomFactFromRandomCatApi.php
+                            <small style="float: right;padding-right: 10px;">1</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Services/Converters/Converter.php" id="Services/Converters/Converter.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Services/Converters/Converter.php
+                            <small style="float: right;padding-right: 10px;">5</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>10</td>
+                                        <td>Argument $value is missing from the Docblock of forward</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>10</td>
+                                        <td>No summary for method forward()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>12</td>
+                                        <td>Argument $value is missing from the Docblock of back</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>12</td>
+                                        <td>No summary for method back()</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Services/Converters/FactNumberToLeadingZerosConverter.php" id="Services/Converters/FactNumberToLeadingZerosConverter.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Services/Converters/FactNumberToLeadingZerosConverter.php
+                            <small style="float: right;padding-right: 10px;">1</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Services/DbFactsGetterService.php" id="Services/DbFactsGetterService.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Services/DbFactsGetterService.php
+                            <small style="float: right;padding-right: 10px;">2</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>23</td>
+                                        <td>No summary for method __construct()</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Services/RandomService.php" id="Services/RandomService.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Services/RandomService.php
+                            <small style="float: right;padding-right: 10px;">1</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Services/ResponseBuilders/ConcreteDecorators/DbResponseFinalArrayBuilder.php" id="Services/ResponseBuilders/ConcreteDecorators/DbResponseFinalArrayBuilder.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Services/ResponseBuilders/ConcreteDecorators/DbResponseFinalArrayBuilder.php
+                            <small style="float: right;padding-right: 10px;">1</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Services/ResponseBuilders/ConcreteDecorators/FactsDataSingleRecordBuilder.php" id="Services/ResponseBuilders/ConcreteDecorators/FactsDataSingleRecordBuilder.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Services/ResponseBuilders/ConcreteDecorators/FactsDataSingleRecordBuilder.php
+                            <small style="float: right;padding-right: 10px;">1</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Services/ResponseBuilders/ConcreteDecorators/JSONResponseBuilder.php" id="Services/ResponseBuilders/ConcreteDecorators/JSONResponseBuilder.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Services/ResponseBuilders/ConcreteDecorators/JSONResponseBuilder.php
+                            <small style="float: right;padding-right: 10px;">1</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Services/ResponseBuilders/ConcreteDecorators/SingleFactResponseBuilders/NotFoundFactNumberResponseBuilder.php" id="Services/ResponseBuilders/ConcreteDecorators/SingleFactResponseBuilders/NotFoundFactNumberResponseBuilder.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Services/ResponseBuilders/ConcreteDecorators/SingleFactResponseBuilders/NotFoundFactNumberResponseBuilder.php
+                            <small style="float: right;padding-right: 10px;">1</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Services/ResponseBuilders/ConcreteDecorators/SingleFactResponseBuilders/NotFoundNumberInCategoryResponseBuilder.php" id="Services/ResponseBuilders/ConcreteDecorators/SingleFactResponseBuilders/NotFoundNumberInCategoryResponseBuilder.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Services/ResponseBuilders/ConcreteDecorators/SingleFactResponseBuilders/NotFoundNumberInCategoryResponseBuilder.php
+                            <small style="float: right;padding-right: 10px;">1</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Services/ResponseBuilders/ConcreteDecorators/SingleFactResponseBuilders/SingleFactResponseBuilder.php" id="Services/ResponseBuilders/ConcreteDecorators/SingleFactResponseBuilders/SingleFactResponseBuilder.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Services/ResponseBuilders/ConcreteDecorators/SingleFactResponseBuilders/SingleFactResponseBuilder.php
+                            <small style="float: right;padding-right: 10px;">7</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>83</td>
+                                        <td>Name of argument $number does not match with the DocBlock&#039;s name $fact in setNumber()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>notice</td>
+                                        <td>83</td>
+                                        <td>Parameter $fact could not be found in setNumber()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>91</td>
+                                        <td>Name of argument $category does not match with the DocBlock&#039;s name $fact in setCategory()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>notice</td>
+                                        <td>91</td>
+                                        <td>Parameter $fact could not be found in setCategory()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>99</td>
+                                        <td>Name of argument $notFound does not match with the DocBlock&#039;s name $fact in setNotFound()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>notice</td>
+                                        <td>99</td>
+                                        <td>Parameter $fact could not be found in setNotFound()</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Services/ResponseBuilders/ConcreteDecorators/SingleFactResponseBuilders/SuccessFactResponseBuilder.php" id="Services/ResponseBuilders/ConcreteDecorators/SingleFactResponseBuilders/SuccessFactResponseBuilder.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Services/ResponseBuilders/ConcreteDecorators/SingleFactResponseBuilders/SuccessFactResponseBuilder.php
+                            <small style="float: right;padding-right: 10px;">1</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Services/ResponseBuilders/RB.php" id="Services/ResponseBuilders/RB.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Services/ResponseBuilders/RB.php
+                            <small style="float: right;padding-right: 10px;">1</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Services/ResponseBuilders/ResponseBuilder.php" id="Services/ResponseBuilders/ResponseBuilder.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Services/ResponseBuilders/ResponseBuilder.php
+                            <small style="float: right;padding-right: 10px;">1</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Services/ResponseBuilders/ResponseBuilderDecorator.php" id="Services/ResponseBuilders/ResponseBuilderDecorator.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Services/ResponseBuilders/ResponseBuilderDecorator.php
+                            <small style="float: right;padding-right: 10px;">3</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>17</td>
+                                        <td>Argument $rb is missing from the Docblock of __construct</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>17</td>
+                                        <td>No summary for method __construct()</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Services/Service.php" id="Services/Service.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Services/Service.php
+                            <small style="float: right;padding-right: 10px;">1</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Services/Verifiers/FactCategoryVerifier.php" id="Services/Verifiers/FactCategoryVerifier.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Services/Verifiers/FactCategoryVerifier.php
+                            <small style="float: right;padding-right: 10px;">2</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>10</td>
+                                        <td>No summary for class \App\Services\Verifiers\FactCategoryVerifier</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Services/Verifiers/FactNumberVerifier.php" id="Services/Verifiers/FactNumberVerifier.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Services/Verifiers/FactNumberVerifier.php
+                            <small style="float: right;padding-right: 10px;">4</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>10</td>
+                                        <td>No summary for class \App\Services\Verifiers\FactNumberVerifier</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>16</td>
+                                        <td>Name of argument $number does not match with the DocBlock&#039;s name $category in verify()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>notice</td>
+                                        <td>16</td>
+                                        <td>Parameter $category could not be found in verify()</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Http/Controllers/Controller.php" id="Http/Controllers/Controller.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Http/Controllers/Controller.php
+                            <small style="float: right;padding-right: 10px;">2</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>7</td>
+                                        <td>No summary for class \App\Http\Controllers\Controller</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Http/Controllers/ErrorsController.php" id="Http/Controllers/ErrorsController.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Http/Controllers/ErrorsController.php
+                            <small style="float: right;padding-right: 10px;">2</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>5</td>
+                                        <td>No summary for class \App\Http\Controllers\ErrorsController</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Http/Controllers/ExampleController.php" id="Http/Controllers/ExampleController.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Http/Controllers/ExampleController.php
+                            <small style="float: right;padding-right: 10px;">2</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>5</td>
+                                        <td>No summary for class \App\Http\Controllers\ExampleController</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Http/Controllers/FactsApiController.php" id="Http/Controllers/FactsApiController.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Http/Controllers/FactsApiController.php
+                            <small style="float: right;padding-right: 10px;">9</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>37</td>
+                                        <td>No summary for method getRandomFactFromRandomCat()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>46</td>
+                                        <td>Argument $fact_number is missing from the Docblock of getFactFromRandomCat</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>46</td>
+                                        <td>No summary for method getFactFromRandomCat()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>60</td>
+                                        <td>Argument $fact_category is missing from the Docblock of getRandomFactFromConcreteCat</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>60</td>
+                                        <td>No summary for method getRandomFactFromConcreteCat()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>74</td>
+                                        <td>Argument $fact_category is missing from the Docblock of getFactFromConcreteCat</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>74</td>
+                                        <td>Argument $fact_number is missing from the Docblock of getFactFromConcreteCat</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>74</td>
+                                        <td>No summary for method getFactFromConcreteCat()</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Http/Controllers/IndexController.php" id="Http/Controllers/IndexController.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Http/Controllers/IndexController.php
+                            <small style="float: right;padding-right: 10px;">1</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Configs/ConcreteConfigs/FactsConfig.php" id="Configs/ConcreteConfigs/FactsConfig.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Configs/ConcreteConfigs/FactsConfig.php
+                            <small style="float: right;padding-right: 10px;">1</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Configs/Config.php" id="Configs/Config.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Configs/Config.php
+                            <small style="float: right;padding-right: 10px;">1</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>0</td>
+                                        <td>No summary was found for this file</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                    </div>
+    </section>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                            <li><a href="../namespaces/App.html">\App</a></li>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on February 27th, 2019 at 21:39.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>

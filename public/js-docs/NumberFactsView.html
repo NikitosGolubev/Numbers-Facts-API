@@ -201,7 +201,7 @@ It's OBSERVER - part of Observer pattern. Observes fact number.</p></div>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="views_number-facts-view.js.html">views/number-facts-view.js</a>, <a href="views_number-facts-view.js.html#line51">line 51</a>
+        <a href="views_number-facts-view.js.html">views/number-facts-view.js</a>, <a href="views_number-facts-view.js.html#line75">line 75</a>
     </li></ul></dd>
     
 
@@ -228,7 +228,219 @@ It's OBSERVER - part of Observer pattern. Observes fact number.</p></div>
 
         
 <div class="param-desc">
-    <p>DOM.</p>
+    <p>DOM</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getFactCategoryClassName"><span class="type-signature"></span>getFactCategoryClassName<span class="signature">()</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Returns class name of fact category container(-s)</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="views_number-facts-view.js.html">views/number-facts-view.js</a>, <a href="views_number-facts-view.js.html#line93">line 93</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getFactNumberContainer"><span class="type-signature"></span>getFactNumberContainer<span class="signature">()</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Returns DOM element: FactNumberContainer. (Getter)</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="views_number-facts-view.js.html">views/number-facts-view.js</a>, <a href="views_number-facts-view.js.html#line87">line 87</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>DOM</p>
 </div>
 
 
@@ -309,7 +521,7 @@ It's OBSERVER - part of Observer pattern. Observes fact number.</p></div>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="views_number-facts-view.js.html">views/number-facts-view.js</a>, <a href="views_number-facts-view.js.html#line45">line 45</a>
+        <a href="views_number-facts-view.js.html">views/number-facts-view.js</a>, <a href="views_number-facts-view.js.html#line69">line 69</a>
     </li></ul></dd>
     
 
@@ -336,7 +548,7 @@ It's OBSERVER - part of Observer pattern. Observes fact number.</p></div>
 
         
 <div class="param-desc">
-    <p>DOM.</p>
+    <p>DOM</p>
 </div>
 
 
@@ -417,7 +629,7 @@ It's OBSERVER - part of Observer pattern. Observes fact number.</p></div>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="views_number-facts-view.js.html">views/number-facts-view.js</a>, <a href="views_number-facts-view.js.html#line57">line 57</a>
+        <a href="views_number-facts-view.js.html">views/number-facts-view.js</a>, <a href="views_number-facts-view.js.html#line81">line 81</a>
     </li></ul></dd>
     
 
@@ -444,7 +656,7 @@ It's OBSERVER - part of Observer pattern. Observes fact number.</p></div>
 
         
 <div class="param-desc">
-    <p>DOM.</p>
+    <p>DOM</p>
 </div>
 
 
@@ -473,6 +685,160 @@ It's OBSERVER - part of Observer pattern. Observes fact number.</p></div>
     
 
     
+    <h4 class="name" id="updateFactCategory"><span class="type-signature"></span>updateFactCategory<span class="signature">(category)</span><span class="type-signature"> &rarr; {Void}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Updates view of fact category menu. (changes active elements if needed).
+Also changes current-fact-category attr value.     *</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>category</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Changed fact category.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="views_number-facts-view.js.html">views/number-facts-view.js</a>, <a href="views_number-facts-view.js.html#line55">line 55</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Void</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
     <h4 class="name" id="updateFactNumber"><span class="type-signature"></span>updateFactNumber<span class="signature">(factNumber)</span><span class="type-signature"> &rarr; {Void}</span></h4>
     
 
@@ -481,8 +847,8 @@ It's OBSERVER - part of Observer pattern. Observes fact number.</p></div>
 
 
 <div class="description">
-    <p>Method that is called(by subject) when fact number changes.
-Updates fact number visually everywhere, where it's displayed.</p>
+    <p>Method that is called(by subject) when fact data changes.
+Updates fact data visually everywhere, where it's displayed.</p>
 </div>
 
 
@@ -575,7 +941,7 @@ Updates fact number visually everywhere, where it's displayed.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="views_number-facts-view.js.html">views/number-facts-view.js</a>, <a href="views_number-facts-view.js.html#line31">line 31</a>
+        <a href="views_number-facts-view.js.html">views/number-facts-view.js</a>, <a href="views_number-facts-view.js.html#line43">line 43</a>
     </li></ul></dd>
     
 
@@ -637,13 +1003,13 @@ Updates fact number visually everywhere, where it's displayed.</p>
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="DomOptimizer.html">DomOptimizer</a></li><li><a href="NumberFactsController.html">NumberFactsController</a></li><li><a href="NumberFactsModel.html">NumberFactsModel</a></li><li><a href="NumberFactsView.html">NumberFactsView</a></li></ul><h3>Namespaces</h3><ul><li><a href="NikitosGolubev.html">NikitosGolubev</a></li><li><a href="NikitosGolubev_Changers.html">NikitosGolubev\Changers</a></li><li><a href="NikitosGolubev_Controllers.html">NikitosGolubev\Controllers</a></li><li><a href="NikitosGolubev_Models.html">NikitosGolubev\Models</a></li><li><a href="NikitosGolubev_Starters.html">NikitosGolubev\Starters</a></li><li><a href="NikitosGolubev_Views.html">NikitosGolubev\Views</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="DomOptimizer.html">DomOptimizer</a></li><li><a href="NumberFactsController.html">NumberFactsController</a></li><li><a href="NumberFactsModel.html">NumberFactsModel</a></li><li><a href="NumberFactsView.html">NumberFactsView</a></li></ul><h3>Namespaces</h3><ul><li><a href="NikitosGolubev.html">NikitosGolubev</a></li><li><a href="NikitosGolubev_Changers.html">NikitosGolubev\Changers</a></li><li><a href="NikitosGolubev_Controllers.html">NikitosGolubev\Controllers</a></li><li><a href="NikitosGolubev_Models.html">NikitosGolubev\Models</a></li><li><a href="NikitosGolubev_Starters.html">NikitosGolubev\Starters</a></li><li><a href="NikitosGolubev_Views.html">NikitosGolubev\Views</a></li></ul><h3>Global</h3><ul><li><a href="global.html#findParentByClassName">findParentByClassName</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Feb 10 2019 19:44:46 GMT+0300 (RTZ 2 (зима))
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Feb 27 2019 23:49:27 GMT+0300 (RTZ 2 (зима))
 </footer>
 
 <script> prettyPrint(); </script>
