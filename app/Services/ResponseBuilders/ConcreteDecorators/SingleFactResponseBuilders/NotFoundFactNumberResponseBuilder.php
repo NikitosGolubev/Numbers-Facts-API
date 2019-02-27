@@ -1,0 +1,41 @@
+<?php
+
+namespace App\Services\ResponseBuilders\ConcreteDecorators\SingleFactResponseBuilders;
+
+use App\Services\ResponseBuilders\ResponseBuilder;
+use App\Services\ResponseBuilders\ConcreteDecorators\SingleFactResponseBuilders\SingleFactResponseBuilder;
+use App\Configs\ConcreteConfigs\FactsConfig;
+use App\Services\RandomService;
+
+/**
+ * Decorator
+ * @uses  FactsConfig
+ * @uses  RandomService
+ */
+class NotFoundFactNumberResponseBuilder extends SingleFactResponseBuilder implements
+    ResponseBuilder
+{
+    /**
+     * Builds response which says that fact wasn't found
+     * @param  Array $data "number" - fact number which hasn't matched with any fact
+     * @return String|False
+     */
+    public function build($data) {
+        $number = $data['number'];
+
+        $empty_messagies_arr = FactsConfig::FACTS_EMPTY_MESSAGIES;
+        // Getting random NOT FOUND message to put it into response.
+        $random_empty_message = RandomService::getRandomItemFromIndexedArray($empty_messagies_arr);
+
+        // Adding fact number to response TEXT string
+        $random_empty_message = $random_empty_message.$number;
+
+        // Forming the final response
+        $this->setFact($random_empty_message);
+        $this->setNumber($number);
+        $this->setCategory("Doesn't matter");
+        $this->setNotFound(true);
+
+        return parent::build($data);
+    }
+}

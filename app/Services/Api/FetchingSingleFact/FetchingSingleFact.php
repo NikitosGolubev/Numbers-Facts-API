@@ -6,9 +6,9 @@ use App\Services\Api\Api;
 use App\Services\DbFactsGetterService;
 use App\Services\ResponseBuilders\RB;
 use App\Services\ResponseBuilders\ConcreteDecorators\FactsDataSingleRecordBuilder;
-use App\Services\ResponseBuilders\ConcreteDecorators\SuccessFactResponseBuilder;
-use App\Services\ResponseBuilders\ConcreteDecorators\NotFoundFactNumberResponseBuilder;
-use App\Services\ResponseBuilders\ConcreteDecorators\NotFoundNumberInCategoryResponseBuilder;
+use App\Services\ResponseBuilders\ConcreteDecorators\SingleFactResponseBuilders\SuccessFactResponseBuilder;
+use App\Services\ResponseBuilders\ConcreteDecorators\SingleFactResponseBuilders\NotFoundFactNumberResponseBuilder;
+use App\Services\ResponseBuilders\ConcreteDecorators\SingleFactResponseBuilders\NotFoundNumberInCategoryResponseBuilder;
 
 /**
  * Abstract class for api for fetching single fact. (not collections of them).
