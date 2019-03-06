@@ -25,9 +25,9 @@ Most importantly, I've derived an impactful lesson from this project. ***If you 
 It was inspiring and I'm sure a crucial project for me, not only because of the practice and experience I delivered but also due to the cognitive lesson I learned.
 
 # Project description
-Well, I wanted to develop a clone of http://numbersapi.com. So, ofcourse my API here is far more simplier but It still demanded lots of effort from me to build it.
+Well, I wanted to develop a clone of http://numbersapi.com. So, of course, my API here is far more simple but It still demanded lots of effort from me to build it.
 
-I've used both front-end and back-end knowledge here. As I've recently read book about patterns I've decided to implement MVC on javascript here (you can also see that I've used Observer pattern as essential part of MVC). My purpose was to make my code better and cleaner than it was before. I've tried to follow SOLID principles(at back-end). Unfortunatelly, I don't know now how not to breake Single responsibility and open closed principles when I haven't got ability to import files in front-end javascript(btw, I know that this feature was already added to fron-end JS, I haven't still googled its usage, I'll fix this problem in further projects in near future).
+I've used both front-end and back-end knowledge here. As I've recently read the book about patterns I've decided to implement MVC in javascript here (you can also see that I've used Observer pattern as an essential part of MVC). My purpose was to make my code better and cleaner than it was before. I've tried to follow SOLID principles(at back-end). Unfortunately, I don't know now how not to break "Single responsibility" and "open-closed" principles cuz I haven't got ability to include files in front-end javascript(btw, I know that this feature was already added to front-end JS, I haven't still googled its usage, I'll eliminate this flaw in further projects in near future).
 
 # Skills applied
 - HTML
