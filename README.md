@@ -32,7 +32,7 @@ I've used both front-end and back-end knowledge here. As I've recently read the 
 # Skills applied
 - HTML
 - CSS
-- Flex, Grid, Media queries
+- Flex, Grid, Media Queries
 - Bootstrap grid
 - SASS
 - Javascript
@@ -46,5 +46,5 @@ I've used both front-end and back-end knowledge here. As I've recently read the 
 - Composer
 - Npm, GULP
 - Generating auto documentations (JSdoc, PHPdocumentor)
-- Basic knowledge of Linux(Ubuntu) (In fact, I had to deal with it a lot at first steps because I had some issues and always recieved 502 error. I've struggled and read a lot about it in Google and finally figured out simple solution. But before it, it seems like I've gone through all the Ubuntu folders).
+- Basic knowledge of Linux(Ubuntu) (In fact, I had to deal with it a lot at the first steps because I had some issues and always received 502 error. I've struggled and read a lot about it in Google and finally figured out a simple solution. But before it, seems like I've gone through all the Ubuntu folders).
 - Ability to install environment for development
