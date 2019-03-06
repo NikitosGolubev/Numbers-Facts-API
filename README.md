@@ -27,7 +27,7 @@ It was inspiring and I'm sure a crucial project for me, not only because of the 
 # Project description
 Well, I wanted to develop a clone of http://numbersapi.com. So, of course, my API here is far more simple but It still demanded lots of effort from me to build it.
 
-I've used both front-end and back-end knowledge here. As I've recently read the book about patterns I've decided to implement MVC in javascript here (you can also see that I've used Observer pattern as an essential part of MVC). My purpose was to make my code better and cleaner than it was before. I've tried to follow SOLID principles(at back-end). Unfortunately, I don't know now how not to break "Single responsibility" and "open-closed" principles cuz I haven't got ability to include files in front-end javascript(btw, I know that this feature was already added to front-end JS, I haven't still googled its usage, I'll eliminate this flaw in further projects in near future).
+I've used both front-end and back-end knowledge here. As I've recently read the book about patterns I've decided to implement MVC in javascript here (you can also see that I've used Observer pattern as an essential part of MVC). My purpose was to make my code better and cleaner than it was before. I've tried to follow SOLID principles(at back-end). Unfortunately, I don't know now how not to break "Single responsibility" and "open-closed" principles in JS cuz I haven't got ability to include files in front-end javascript(btw, I know that this feature was already added to front-end JS, I haven't still googled its usage, I'll eliminate this flaw in further projects in near future).
 
 # Skills applied
 - HTML
@@ -46,7 +46,7 @@ I've used both front-end and back-end knowledge here. As I've recently read the 
 - Composer
 - Npm, GULP
 - Generating auto documentations (JSdoc, PHPdocumentor)
-- Basic knowledge of Linux(Ubuntu) (In fact, I had to deal with it a lot at the first steps because I had some issues and always received 502 error. I've struggled and read a lot about it in Google and finally figured out a simple solution. But before it, seems like I've gone through all the Ubuntu folders).
+- Basic knowledge of Linux(Ubuntu) (In fact, I had to deal with it a lot at the first steps because I had some issues and always received 502 error. I've struggled and read a lot about it in Google and finally figured out a simple solution. However before it, seems like I've gone through all the Ubuntu folders).
 - Ability to install environment for development
 
 # Numbers-Facts-API
@@ -70,5 +70,26 @@ I've used both front-end and back-end knowledge here. As I've recently read the 
 Это было вдохновляюще, и я уверен, что это важнейший проект для меня, не только из-за практики и опыта, которые я получил, но и из-за познавательных уроков, которые извлёк.
 
 # Описание проекта
+Я хотел разработать клон http://numbersapi.com. Конечно, мой API здесь намного проще, но все же потребовалось достаточно много усилий для его разработки.
+
+Здесь я использовал знания как front-end, так и back-end. Поскольку я недавно читал книгу о шаблонах проектирования, я решил реализовать MVC в javascript здесь (вы также можете заметит, что я использовал шаблон Observer как неотъемлемую часть MVC). Моей целью было сделать мой код лучше и чище, чем раньше. Я пытался следовать SOLID принципам (в back-end). К сожалению, сейчас я не знаю, как не нарушать принципы «single responsibility» и «open-closed» в JS, потому что у меня нет возможности подключать файлы внутри front-end JavaScript (кстати, я знаю, что import уже был добавлен в front-end JS, но я до сих пор не гуглил его использование, я устраню этот недостаток в следующих проектах в ближайшем будущем).
 
 # Применённые навыки
+- HTML
+- CSS
+- Flex, Grid, Media запросы
+- Bootstrap сетка
+- SASS
+- Javascript
+- Архитектурные паттерны проектирования
+- PHP
+- MySQL
+- Lumen micro-framework
+- Создание API
+- Query builder для создание SQL выборок.
+- Способность изучать незнакомые технологии и сразу применять их.
+- Composer
+- Npm, GULP
+- Генерация автодокументаций (JSdoc, PHPdocumentor)
+- Базовые знания Linux(Ubuntu) (На самом деле, мне пришлось взаимодействовать с ОС достаточно много на первых парах, потому что у меня были некоторые проблемы и я всегда получал 502 ошибку. Я много мучился и читал в гугле различные материалы, и в результате смог найти простое решение. Однако до этого, кажется я прошерстал все папки в Ubuntu).
+- Способность поднимать рабочее окружение
