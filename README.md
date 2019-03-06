@@ -19,3 +19,27 @@ Most importantly, I've derived an impactful lesson from this project. ***If you 
 
 It was inspiring and I'm sure crucial project for me, not only because the practise and experience I delivered but also due to cognitive lesson I learned.
 
+# Project description
+Well, I wanted to develop a clone of http://numbersapi.com. So, ofcourse my API here is far more simplier but It still demanded lots of effort from me to build it.
+
+I've used both front-end and back-end knowledge here. As I've recently read book about patterns I've decided to implement MVC on javascript here (you can also see that I've used Observer pattern as essential part of MVC). My purpose was to make my code better and cleaner than it was before. I've tried to follow SOLID principles(at back-end). Unfortunatelly, I don't know now how not to breake Single responsibility and open closed principles when I haven't got ability to import files in front-end javascript(btw, I know that this feature was already added to fron-end JS, I haven't still googled its usage, I'll fix this problem in further projects in near future).
+
+# Skills applied
+- HTML
+- CSS
+- Flex, Grid, Media queries
+- Bootstrap grid
+- SASS
+- Javascript
+- Architectural patterns
+- PHP
+- MySQL
+- Lumen micro-framework
+- Building API
+- Query builder to make SQL requests.
+- Ability to explore unknown technologies and apply them immediately.
+- Composer
+- Npm, GULP
+- Generating auto documentations (JSdoc, PHPdocumentor)
+- Basic knowledge of Linux(Ubuntu) (In fact, I had to deal with it a lot at first steps because I had some issues and always recieved 502 error. I've struggled and read a lot about it in Google and finally figured out simple solution. But before it, it seems like I've gone through all the Ubuntu folders).
+- Ability to install environment for development
