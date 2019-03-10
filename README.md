@@ -39,6 +39,7 @@ I've used both front-end and back-end knowledge here. As I've recently read the 
 - Architectural patterns
 - PHP
 - MySQL
+- REST
 - Lumen micro-framework
 - Building API
 - Query builder to make SQL requests.
@@ -84,6 +85,7 @@ I've used both front-end and back-end knowledge here. As I've recently read the 
 - Архитектурные паттерны проектирования
 - PHP
 - MySQL
+- REST
 - Lumen micro-framework
 - Создание API
 - Query builder для создание SQL выборок.
