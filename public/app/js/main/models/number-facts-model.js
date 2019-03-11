@@ -26,6 +26,12 @@ class NumberFactsModel {
         this.maxNumberLen = 4;
 
         /**
+         * Max fact number
+         * @type {Number}
+         */
+        this.maxNumber = 9999;
+
+        /**
          * Current fact category to which facts should relate
          * @type {String}
          */
@@ -85,7 +91,6 @@ class NumberFactsModel {
      * @returns {Void}
      */
     setFactNumber(factNumber) {
-        console.log(factNumber);
         // Sometimes factNumber may not be valid here, so it's worth to validate it first.
         this.factNumber = this.alignFactNumberWithLimit(factNumber);
 
@@ -228,8 +233,19 @@ class NumberFactsModel {
 
         // User may type ONLY DIGITS, no other characters allowed, so cutting them out
         if (noneDigitSymbolPos > -1) field.value = field.value.substr(0, noneDigitSymbolPos);
+
         // The length of number is limited
-        if (field.value.length > this.maxNumberLen) field.value = field.value.substr(0, 4);
+        if (field.value.length > this.maxNumberLen) {
+            field.value = field.value.substr(0, this.maxNumberLen);
+        }
+
+        // If number exceeds the maximum, than shorten it on 1 digit
+        // Example:
+        // max = 100; given = 101; validated = 10;
+        if (+field.value > this.maxNumber) {
+            let shortenNumberLength = field.value.length - 1;
+            field.value = field.value.substr(0, shortenNumberLength);
+        }
     }
 
     /**
@@ -307,15 +323,11 @@ class NumberFactsModel {
         let factNumberStringLen = (""+number).length;
         
         // if to little, then - 0
-        // else if to big then - 99999....9
+        // else if to big then - to max number
         // else its ok, then - returning passed number
         if (factNumberStringLen > this.maxNumberLen) number = 0;
         else if (number < 0) {
-            let lastPossibleNumber = "";
-            for (let i = 0; i < this.maxNumberLen; i++) {
-                lastPossibleNumber += "9";
-            }
-            number = +lastPossibleNumber;
+            number = this.maxNumber;
         }
 
         return number;
