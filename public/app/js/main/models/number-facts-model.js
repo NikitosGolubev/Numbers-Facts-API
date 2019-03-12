@@ -56,8 +56,11 @@ class NumberFactsModel {
     removeFactNumberObserver(observer) {
         // Searching for observer
         let indexOfObserver = this.factNumberObservers.indexOf(observer);
-        // Removing observer
-        this.factNumberObservers.splice(indexOfObserver, 1);
+
+        if (indexOfObserver > -1) {
+            // Removing observer
+            this.factNumberObservers.splice(indexOfObserver, 1);
+        }
     }
 
     /**
